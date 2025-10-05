@@ -106,14 +106,4 @@ Notes:
 - Disabling PyAutoGUI failsafe means you cannot abort by slamming the mouse to the top-left. Keep the app window focused so Enter can exit.
 - Only run downloaded code you trust. Review `Code.py` before executing.
 
-## Project Structure (original repo)
-- `Code.py` — main implementation.
-- `Report And Summary.pdf` — writeup.
-- `Video of the working of the project.mp4` — demo video.
 
-## Acknowledgements
-- MediaPipe Hands by Google.
-- OpenCV for video processing.
-- PyAutoGUI for input automation.
-- PyCAW for Windows audio control.
-- screen-brightness-control for display brightness adjustments.
