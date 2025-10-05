@@ -2,7 +2,6 @@
 
 A webcam-based hand gesture controller that uses MediaPipe to detect hand landmarks and maps gestures to OS actions: mouse movement, clicks, scrolling, system volume, and screen brightness.
 
-This README documents how to set up, run, and use the project code found in the GitHub repository `PalakRay07/Hand_gasture` (primary script: `Code.py`).
 
 ## Features
 - Real-time hand tracking with MediaPipe Hands.
