@@ -1,0 +1,13 @@
+# Core runtime
+opencv-python>=4.8.0
+mediapipe>=0.10.11
+numpy>=1.23
+
+# Input automation and system control
+pyautogui>=0.9.54
+pycaw>=20230407
+comtypes>=1.2.0
+screen-brightness-control>=0.22.2
+
+# Protocol Buffers (used by MediaPipe; json_format is imported in Code.py)
+protobuf>=3.20.3,<5
