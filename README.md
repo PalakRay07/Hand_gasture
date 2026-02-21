@@ -1,59 +1,93 @@
-🖐️ Hand Gesture Controller
-MediaPipe + OpenCV | Computer Vision | Human-Computer Interaction
+# 🖐️ Hand Gesture Controller  
+### MediaPipe + OpenCV | Computer Vision | Human–Computer Interaction
 
-A real-time webcam-based gesture control system that translates hand gestures into OS-level actions such as mouse movement, clicking, scrolling, system volume control, and screen brightness adjustment.
+<p align="center">
 
-Built using MediaPipe Hands and OpenCV, this project demonstrates practical computer vision applied to real-world interaction systems.
+<img src="https://img.shields.io/badge/Python-3.9--3.11-blue?style=for-the-badge&logo=python" />
+<img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-red?style=for-the-badge&logo=opencv" />
+<img src="https://img.shields.io/badge/MediaPipe-Hands-green?style=for-the-badge&logo=google" />
+<img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey?style=for-the-badge&logo=windows" />
+<img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 
-🚀 Key Highlights
+</p>
 
-🎯 Real-time hand landmark detection (21 points per hand)
+---
 
-🖱️ Cursor movement with smoothing (jitter reduction)
+## 🚀 Project Overview
 
-👆 Gesture-based clicking (left, right, double)
+A real-time webcam-based **Gesture Control System** that translates human hand gestures into OS-level actions such as:
 
-✊ Drag-and-drop support
+- 🖱️ Mouse movement & clicking  
+- ✊ Drag-and-drop  
+- 📜 Vertical & horizontal scrolling  
+- 🔊 System volume control  
+- 💡 Screen brightness adjustment  
 
-📜 Vertical & horizontal scrolling
+Built using **MediaPipe Hands** and **OpenCV**, this project demonstrates practical computer vision applied to real-world human-computer interaction systems.
 
-🔊 System volume control (Windows via PyCAW)
+---
 
-💡 Screen brightness adjustment
+## 📊 Project Highlights
 
-⚡ Low-latency interaction
+<p align="center">
+<img src="https://img.shields.io/badge/Real--Time-Low%20Latency-blueviolet?style=flat-square" />
+<img src="https://img.shields.io/badge/21-Landmarks%20Per%20Hand-orange?style=flat-square" />
+<img src="https://img.shields.io/badge/8-Gesture%20Types-success?style=flat-square" />
+<img src="https://img.shields.io/badge/Automation-PyAutoGUI-informational?style=flat-square" />
+</p>
 
-🛠️ Tech Stack
-Category	Technology
-Computer Vision	MediaPipe Hands
-Image Processing	OpenCV
-Automation	PyAutoGUI
-Volume Control	PyCAW + COM
-Brightness Control	screen-brightness-control
-Language	Python (3.9–3.11 recommended)
-📦 System Requirements
+### 🎯 Key Features
 
-OS: Windows 10 / 11 (recommended)
+- Real-time hand landmark detection (21 points per hand)
+- Cursor smoothing to reduce jitter
+- Gesture-based left, right & double click
+- Click-and-drag via fist gesture
+- Vertical & horizontal scrolling
+- System volume control (Windows via PyCAW)
+- Screen brightness adjustment
+- Low-latency interaction pipeline
 
-Hardware: Integrated or external webcam
+---
 
-Python: 3.9 – 3.11
+# 🛠️ Tech Stack
 
-Good lighting environment for accurate tracking
+| Category | Technology |
+|----------|------------|
+| Computer Vision | MediaPipe Hands |
+| Image Processing | OpenCV |
+| Automation | PyAutoGUI |
+| Volume Control | PyCAW + COM |
+| Brightness Control | screen-brightness-control |
+| Language | Python (3.9–3.11) |
 
-⚙️ Installation Guide
-1️⃣ Create Virtual Environment (Recommended)
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-2️⃣ Install Dependencies
+---
+
+# 📦 System Requirements
+
+- **OS:** Windows 10 / 11 (recommended)
+- **Hardware:** Integrated or external webcam
+- **Python:** 3.9 – 3.11
+- Good lighting for accurate tracking
+
+---
+
+# ⚙️ Installation Guide
+
+## 1️⃣ Create Virtual Environment (Recommended)
+
+```python -m venv .venv.\.venv\Scripts\Activate.ps1```
+
+## 2️⃣ Install Dependencies
 
 If requirements.txt exists:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
-If not, create one with:
+If not, create requirements.txt:
 
-opencv-python>=4.8.0
+```python
+ opencv-python>=4.8.0
 mediapipe>=0.10.11
 numpy>=1.23
 pyautogui>=0.9.54
@@ -61,77 +95,83 @@ pycaw>=20230407
 comtypes>=1.2.0
 screen-brightness-control>=0.22.2
 protobuf>=3.20.3,<5
+```
 
-Then run:
+Then install:
 
-pip install -r requirements.txt
-📥 Getting the Code
-Option A – Clone Repository
+```pip install -r requirements.txt```
+
+### 📥 Getting the Code
+
+Clone Repository
+```python
 git clone https://github.com/PalakRay07/Hand_gasture.git
 cd Hand_gasture
-Option B – Download ZIP
+```
 
-Download from GitHub and extract.
+Or download ZIP and extract.
 
-Ensure Code.py exists in the root directory.
+Ensure ```Code.py``` is in the root directory.
 
-▶️ Running the Application
-python Code.py
+▶️ Run the Application
 
-A window titled “Gesture Controller” will open displaying:
+```python Code.py```
+
+A window titled "Gesture Controller" will open showing:
 
 Webcam feed
 
 Hand landmarks
 
-Real-time gesture recognition
+Real-time gesture detection
 
 Press Enter to exit.
 
-🧠 How It Works (Architecture Overview)
-1️⃣ MediaPipe Hands
+### 🧠 Architecture Overview
 
-Detects 21 landmarks per hand
+### 1️⃣ MediaPipe Layer
+
+Detects 21 hand landmarks
 
 Identifies hand orientation (Right / Left)
 
-2️⃣ Gesture Recognition Layer
+### 2️⃣ Gesture Recognition Module
 
-Custom HandRecog module:
+Custom ```HandRecog``` logic:
 
 Detects open/closed fingers
 
-Encodes gestures:
+### Encodes gestures:
 
-PALM
+```- PALM```
 
-FIST
+```- FIST```
 
-INDEX
+```- INDEX```
 
-MID
+```- MID```
 
-TWO_FINGER_CLOSED
+```- TWO_FINGER_CLOSED```
 
-V_GEST
+```- V_GEST```
 
-PINCH_MAJOR
+```- PINCH_MAJOR```
 
-PINCH_MINOR
+```- PINCH_MINOR```
 
-3️⃣ Gesture Controller
+### 3️⃣ Gesture Controller
 
-Routes detected gestures to OS controller
+Routes gestures to OS controller
 
-Applies smoothing for stable pointer movement
+Applies smoothing algorithm
 
-4️⃣ OS Interaction Layer
+### 4️⃣ OS Interaction Layer
 
-pyautogui → Mouse actions
+pyautogui → Mouse control
 
-pycaw → System volume
+pycaw → Volume adjustment
 
-screen_brightness_control → Brightness
+screen_brightness_control → Brightness control
 
 ✋ Gesture → Action Mapping
 Gesture	Action
@@ -142,43 +182,36 @@ Gesture	Action
 🤏 TWO_FINGER_CLOSED	Double click
 🤏 PINCH_MINOR	Scroll
 🤏 PINCH_MAJOR	Volume / Brightness
-Pinch Controls
 
-Vertical motion → Volume or vertical scroll
+### Pinch Motion Controls
 
-Horizontal motion → Brightness or horizontal scroll
+- Vertical motion → Volume or vertical scroll
 
-🎯 Optimization Techniques Used
+- Horizontal motion → Brightness or horizontal scroll
 
-Pointer movement smoothing to reduce jitter
+### 🎯 Optimization Techniques
 
-Gesture hold validation to avoid accidental clicks
+- Pointer smoothing to reduce jitter
 
-Dominant-hand detection
+- Gesture hold validation to prevent accidental clicks
 
-Threshold-based pinch detection
+- Dominant-hand detection
 
-📷 Suggested Screenshots Section (Add Later)
+- Threshold-based pinch recognition
 
-Create an images folder and add:
+### 🧪 Troubleshooting
 
-## Demo
+### ❌ Blank Window
 
-![Tracking](images/tracking.png)
-![Pinch](images/pinch.png)
-![Volume Control](images/volume.png)
-🧪 Troubleshooting
-❌ Blank or closing window
+Ensure webcam is connected
 
-Check webcam connection
+Try changing:
 
-Change camera index in:
+```cv2.VideoCapture(0)```
 
-cv2.VideoCapture(0)
+to 1 or 2.
 
-Try 1 or 2 instead.
-
-❌ Erratic Gesture Detection
+### ❌ Unstable Gestures
 
 Improve lighting
 
@@ -186,42 +219,36 @@ Keep hand fully visible
 
 Avoid fast movements
 
-Reduce background clutter
+### ❌ Volume / Brightness Not Working
 
-❌ Volume / Brightness Not Working
+Ensure Windows audio endpoint support
 
-Volume requires Windows audio endpoint
+Enable DDC/CI for external monitors
 
-External monitors may not support brightness control
+### 🔒 Safety Notice
 
-Enable DDC/CI for external displays
+```pyautogui.FAILSAFE = False``` is enabled.
+Keep the app window focused to exit safely by pressing Enter.
 
-🔒 Safety Notes
+Only run trusted source code and review ```Code.py``` before execution.
 
-pyautogui.FAILSAFE = False is enabled
-→ Keep app window focused to exit safely.
+### 🌟 Future Improvements
 
-Only run trusted source code.
+- Gesture calibration mode
 
-Review Code.py before executing.
+- Customizable gesture mapping
 
-🌟 Future Improvements
+- GUI control dashboard
 
-Add gesture calibration mode
+- macOS / Linux support
 
-Add GUI control panel
+- ML-based dynamic gesture learning
 
-Add gesture customization
+- IoT device integration
 
-Add macOS / Linux support
+### 👩‍💻 Author
 
-Add ML-based dynamic gesture learning
-
-Integrate with IoT smart devices
-
-👩‍💻 Author
-
-Palak Ray
+Palak.
 Computer Engineering Student | AI & Computer Vision Enthusiast
 
 📧 palak070704@gmail.com
@@ -232,14 +259,12 @@ Computer Engineering Student | AI & Computer Vision Enthusiast
 
 This project demonstrates:
 
-Real-time computer vision
+Real-time computer vision engineering
 
-Human-computer interaction design
+Human–computer interaction design
 
 OS-level automation
 
 Signal smoothing & gesture stability
 
 Practical ML integration
-
-It’s not just a demo — it’s a functional alternative input system.
