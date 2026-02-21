@@ -87,7 +87,7 @@ If requirements.txt exists:
 If not, create requirements.txt:
 
 ```python
- opencv-python>=4.8.0
+opencv-python>=4.8.0
 mediapipe>=0.10.11
 numpy>=1.23
 pyautogui>=0.9.54
